@@ -13,7 +13,7 @@ resource "azurecaf_name" "self" {
   resource_type = "azurerm_resource_group"
   prefixes      = var.caf_prefixes
   suffixes      = []
-  use_slug      = true
+  use_slug      = false
   clean_input   = true
   separator     = var.name_separator
 }
