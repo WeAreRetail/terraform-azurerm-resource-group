@@ -39,32 +39,6 @@ module "aware_resource_group" {
 }
 ```
 
-#### Requirements
-
-| Name                                                                     | Version   |
-| ------------------------------------------------------------------------ | --------- |
-| <a name="requirement_terraform"></a> [terraform](#requirement_terraform) | >= 0.15.0 |
-| <a name="requirement_azurecaf"></a> [azurecaf](#requirement_azurecaf)    | >= 1.2.5  |
-| <a name="requirement_azurerm"></a> [azurerm](#requirement_azurerm)       | >=2.62.0  |
-
-#### Inputs
-
-| Name                                                                  | Description                             | Type           | Default | Required |
-| --------------------------------------------------------------------- | --------------------------------------- | -------------- | ------- | :------: |
-| <a name="input_location"></a> [location](#input_location)             | Azure region to use for deployment.     | `string`       | n/a     |   yes    |
-| <a name="input_tags"></a> [tags](#input_tags)                         | Resource group tags.                    | `map(string)`  | n/a     |   yes    |
-| <a name="input_caf_prefixes"></a> [caf_prefixes](#input_caf_prefixes) | Prefixes to use for caf naming.         | `list(string)` | `[]`    |    no    |
-| <a name="input_custom_name"></a> [custom_name](#input_custom_name)    | If defined, resource group custom name. | `string`       | `""`    |    no    |
-| <a name="input_description"></a> [description](#input_description)    | Resource group description.             | `string`       | `""`    |    no    |
-
-#### Outputs
-
-| Name                                                        | Description             |
-| ----------------------------------------------------------- | ----------------------- |
-| <a name="output_id"></a> [id](#output_id)                   | Resource group id       |
-| <a name="output_location"></a> [location](#output_location) | Resource group location |
-| <a name="output_name"></a> [name](#output_name)             | Resource group name     |
-
 <!-- BEGIN_TF_DOCS -->
 #### Requirements
 
