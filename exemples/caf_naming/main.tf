@@ -21,10 +21,10 @@ module "aware_naming" {
 }
 
 module "aware_resource_group" {
-  source = "WeAreRetail/resource_group/azurerm"
+  source = "WeAreRetail/resource-group/azurerm"
 
   tags         = module.aware_tagging.tags
   location     = "France Central"
-  description  = "Test resource group"
+  description  = "My Resource-group"
   caf_prefixes = module.aware_naming.resource_group_prefixes
 }

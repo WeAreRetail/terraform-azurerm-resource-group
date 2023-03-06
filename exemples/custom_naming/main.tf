@@ -11,12 +11,21 @@ module "aware_tagging" {
   repository        = "my_pet_project"
 }
 
+module "aware_naming" {
+  source = "WeAreRetail/naming/azurerm"
+
+  project     = "PRJ"
+  area        = "master"
+  environment = "DEV"
+  location    = "France Central"
+}
+
 module "aware_resource_group" {
   source = "WeAreRetail/resource-group/azurerm"
 
   tags         = module.aware_tagging.tags
   location     = "France Central"
   description  = "Test resource group"
-  custom_name  = "Custom name"
+  custom_name  = "Custom-name"
   caf_prefixes = module.aware_naming.resource_group_prefixes
 }
